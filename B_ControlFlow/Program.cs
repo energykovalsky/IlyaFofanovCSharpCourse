@@ -269,7 +269,7 @@
             //	max = b;
 
             //3rd
-            max = a > b ? a : b;
+            int max = a > b ? a : b;
 
             Console.WriteLine($"Max = {max}");
         }
@@ -311,7 +311,7 @@
             {
                 Console.WriteLine("Not enough weight.");
             }
-            else if (ifNormal)
+            else if (isNormal)
             {
                 Console.WriteLine("You're OK");
             }
