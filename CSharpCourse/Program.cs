@@ -10,12 +10,12 @@ namespace CSharpCourse
             
         }
 
-        static void DateTimeIntro()
+        static void DateTimeIntro()             //029 Знакомство с DateTime.mp4             
         {
             DateTime now = DateTime.Now;
             Console.WriteLine(now.ToString()); //11.07.2019 19:04:02
 
-            Console.WriteLine($"It's {now.Date}, {now.Hour}:{now.Minute}"); /It's 11.07.2019 0:00:00, 19:4
+            Console.WriteLine($"It's {now.Date}, {now.Hour}:{now.Minute}"); //It's 11.07.2019 0:00:00, 19:4
 
             DateTime dt = new DateTime(2016, 2, 28);
             DateTime newDt = dt.AddDays(1);
@@ -27,7 +27,7 @@ namespace CSharpCourse
             Console.WriteLine(ts.Days); //1229
 
         }
-        static void IntroToArrays()
+        static void IntroToArrays()             //028 Введение в массивы.mp4                
         {
             int[] a1;
             a1 = new int[10];
@@ -41,7 +41,7 @@ namespace CSharpCourse
             int number = a4[4];
             Console.WriteLine(number); //5
 
-            a[4] = 6;
+            a4[4] = 6;
             Console.WriteLine(a4[4]); // 6
 
             Console.WriteLine(a4.Length); // 5
