@@ -4,6 +4,35 @@
     {
         static void Main(string[] args)
         {
+
+        }
+    
+        static void ArrayType()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int index = Array.BinarySearch(numbers, 7);
+            Console.WriteLine(index);
+
+            int[] copy = new int[10];
+            Array.Copy(numbers, copy, numbers.Length);
+
+            int[] anotherCopy = new int[10];
+            copy.CopyTo(anotherCopy, 0);
+
+            Array.Reverse(copy);
+            foreach (var c in copy)
+            {
+                Console.WriteLine(c);
+            }
+
+            Array.Sort(copy);
+            foreach (var c in copy)
+            {
+                Console.WriteLine(c);
+            }
+
+            Array.Clear(copy, 0, copy.Length);
+
             int[] a1;
             a1 = new int[10];
 
@@ -19,8 +48,6 @@
             myArray2.SetValue(12, 0);
 
             Console.WriteLine(myArray2.GetValue(0));
-
-
         }
     }
 }
