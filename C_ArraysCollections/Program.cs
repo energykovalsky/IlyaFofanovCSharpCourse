@@ -6,7 +6,48 @@
         {
 
         }
-    
+        static void ListDemo()
+        {
+            var intList = new List<int> { 1, 4, 2, 7, 5, 9, 12 };
+            intList.Add(7);
+
+            int[] intArray = { 1, 2, 3 };
+            intList.AddRange(intArray);
+
+            if (intList.Remove(1)) //delete first occurrence of 1
+            {
+                //do
+            }
+            else { }
+
+            intList.RemoveAt(0); //delete element at index 0
+
+            intList.Reverse();
+
+            bool contains = intList.Contains(3);
+
+            int min = intList.Min();
+            int max = intList.Max();
+
+            Console.WriteLine($"Min={min}. Max={max}");
+
+            int indexof = intList.IndexOf(2); //first occurrence
+            int lastindexof = intList.LastIndexOf(2); //last occurrence
+
+            Console.WriteLine($"IndexOf2={indexof}. LastIndexOf2={lastindexof}");
+
+            for (int i = 0; i < intList.Count; i++)
+            {
+                Console.Write($"{intList[i]} ");
+            }
+            Console.WriteLine();
+
+            foreach (int item in intList)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.ReadLine();
+        }
         static void ArrayType()
         {
             int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
