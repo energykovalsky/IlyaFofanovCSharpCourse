@@ -1,5 +1,7 @@
-﻿using System.Security.Cryptography;
+﻿using System.Reflection.PortableExecutable;
+using System.Security.Cryptography;
 using System.Text;
+using D_OOP;
 
 namespace CSharpCourse
 {
@@ -7,7 +9,9 @@ namespace CSharpCourse
     {
         static void Main(string[] args)
         {
-            
+            Character c = new Character();
+            c.Hit(90);
+            Console.WriteLine(c.Health);
         }
 
         static void DateTimeIntro()             //029 Знакомство с DateTime.mp4             
