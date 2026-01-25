@@ -14,6 +14,24 @@ namespace CSharpCourse
             Console.WriteLine(c.Health);
         }
 
+        static void Homework02()
+        {
+            Console.WriteLine("Let's calculate the square of a triangle");
+
+            Console.WriteLine("Enter the length of side AB:");
+            double ab = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the length of side BC:");
+            double bc = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the length of side AC:");
+            double ac = double.Parse(Console.ReadLine());
+
+            double p = (ab + bc + ac) / 2;
+
+            double square = Math.Sqrt(p * (p - ab) * (p - bc) * (p - ac));
+            Console.WriteLine($"Sqaure of the triangle equals {square}");
+        }
         static void DateTimeIntro()             //029 Знакомство с DateTime.mp4             
         {
             DateTime now = DateTime.Now;
