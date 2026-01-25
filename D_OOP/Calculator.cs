@@ -1,18 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace D_OOP
+﻿namespace D_OOP
 {
     internal class Calculator
     {
+        public static bool TryDivide(double divisible, double divisor, out double result)
+        {
+            result = 0;
+            if (divisor == 0)
+            {
+                return false;
+            }
+            result = divisible / divisor;
+            return true;
+        }
+        
+        public static double Average(int[] numbers)         //070 Ключевое слово params.mp4
+        {
+            int sum = 0;
+
+            foreach (int n in numbers)
+            {
+                sum += n;
+            }
+            return (double)sum / numbers.Length;
+        }
+
+        public static double Average2(params int[] numbers) //070 Ключевое слово params.mp4
+        {
+            int sum = 0;
+
+            foreach (int n in numbers)
+            {
+                sum += n;
+            }
+            return (double)sum / numbers.Length;
+        }
+
         public double CalcTriangleSquare(double ab, double bc, double ac)
         {
             double p = (ab + bc + ac) / 2;
-
-            //double square = Math.Sqrt(p * (p - ab) * (p - bc) * (p - ac));
-            //return square;
-
             return Math.Sqrt(p * (p - ab) * (p - bc) * (p - ac));
         }
 
@@ -21,21 +46,17 @@ namespace D_OOP
             return 0.5 * b * h;
         }
 
-        //Overload error
-        //public float CalcTriangleSquare(double b, double h)
-        //{
-        //    return (float)(0.5 * b * h);
-        //}
-
-        //public double CalcTriangleSquareByHeightAndBase(double b, double h)
-        //public double CalcTriangleSquareByHeightAndBase(double b, double h)
-
-
-        // ??? How do we differentiate between two methods?
-        public double CalcTriangleSquare(double ab, double ac, int alpha)
+        public static double CalcTriangleSquare(double ab, double ac, int alpha, bool isInRadians = false)
         {
-            //alpha in radians
-            return 0.5 * ab * ac * Math.Sin(alpha);
+            if (isInRadians)
+            {
+                return 0.5 * ab * ac * Math.Sin(alpha);
+            }
+            else
+            {
+                double rads = alpha * Math.PI / 180;
+                return 0.5 * ab * ac * Math.Sin(rads);
+            }
         }
     }
 }
