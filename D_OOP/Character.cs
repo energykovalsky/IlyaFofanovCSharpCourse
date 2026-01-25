@@ -8,28 +8,6 @@ namespace D_OOP
     {
         public int Health { get; private set; } = 100;
 
-        //public int Health
-        //{
-        //    get
-        //    {
-        //        return health;
-        //    }
-        //    private set
-        //    {
-        //        health = value;
-        //    }
-        //}
-
-        //Чем свойства есть на самом деле
-        //public int GetHealth()
-        //{
-        //    return health;
-        //}
-        //private void SetHealth(int value)
-        //{
-        //    health = value;
-        //}
-
         public void Hit (int damage)
         {
             if (damage > Health)
@@ -40,3 +18,26 @@ namespace D_OOP
         }
     }
 }
+
+//public int Health
+//{
+//    get
+//    {
+//        return health;
+//    }
+//    private set
+//    {
+//        health = value;
+//    }
+//}
+
+//Чем свойства есть на самом деле
+//public int GetHealth()
+//{
+//    return health;
+//}
+//private void SetHealth(int value)
+//{
+//    health = value;
+//}
+
