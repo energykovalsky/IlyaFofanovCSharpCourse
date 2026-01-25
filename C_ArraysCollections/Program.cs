@@ -1,4 +1,6 @@
-﻿namespace CSharpCourse
+﻿using System.Collections.Generic;
+
+namespace CSharpCourse
 {
     internal class Program
     {
@@ -6,7 +8,7 @@
         {
         }
 
-        static void CustomIndexBasedArrays()
+        static void CustomIndexBasedArrays()    //059 Массивы с настраиваемой индексацией.mp4
         {
             Array myArray = Array.CreateInstance(typeof(int), new[] { 4 }, new[] { 1 });
             myArray.SetValue(2019, 1);
@@ -27,7 +29,7 @@
                 Console.WriteLine($"{myArray.GetValue(i)} at index {i}");
             }
         }
-        static void JaggedArray()
+        static void JaggedArray()               //058 Зубчатые массивы.mp4
         {
             int[][] jaggedArray = new int[4][];
             jaggedArray[0] = new int[1];
@@ -58,7 +60,7 @@
                 Console.WriteLine();
             }
         }
-        static void MultidimArrays()
+        static void MultidimArrays()            //057 Многомерные массивы.mp4
         {
             // 1 2 3 4 
 
@@ -79,7 +81,7 @@
             }
             Console.ReadLine();
         }
-        static void StackQueue()
+        static void StackQueue()                //056 Stack и Queue (стек и очередь)
         {
             var queue = new Queue<int>();
             queue.Enqueue(1);
@@ -118,7 +120,7 @@
                 Console.WriteLine(cur);
             }
         }
-        static void Dictionary()
+        static void Dictionary()                //055 Коллекция Dictionary.mp4
         {
             var people = new Dictionary<int, string>();
             people.Add(1, "John");
@@ -189,7 +191,7 @@
 
             people.Clear();
         }
-        static void ListDemo()
+        static void ListDemo()                  //054 Коллекция List.mp4
         {
             var intList = new List<int> { 1, 4, 2, 7, 5, 9, 12 };
             intList.Add(7);
@@ -231,7 +233,7 @@
             }
             Console.ReadLine();
         }
-        static void ArrayType()
+        static void ArrayType()                 //053 Класс Array.mp4
         {
             int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             int index = Array.BinarySearch(numbers, 7);
@@ -272,6 +274,6 @@
             myArray2.SetValue(12, 0);
 
             Console.WriteLine(myArray2.GetValue(0));
-        }
+        }   
     }
 }
