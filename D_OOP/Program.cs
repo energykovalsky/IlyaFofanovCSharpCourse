@@ -6,7 +6,67 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        PointVal a; //same as Point a = new PointVal();
+
+    }
+
+    static void PassByRefDemo()
+    {
+        int a = 1;
+        int b = 2;
+
+        Swap(ref a, ref b);
+
+        Console.WriteLine($"a={a}, b={b}");
+
+        Console.ReadLine();
+
+        var list = new List<int>();
+        AddNumbers(list);
+
+        foreach (var item in list)
+        {
+            Console.WriteLine(item);
+        }
+    }
+    
+    static void Swap(ref int a, ref int b)
+    {
+        Console.WriteLine($"Original a={a}, b={b}");
+
+        int tmp = a;
+        a = b;
+        b = tmp;
+
+        Console.WriteLine($"Swapped a={a}, b={b}");
+    }
+
+    static void AddNumbers(List<int> numbers)
+    {
+        numbers.Add(1);
+        numbers.Add(2);
+        numbers.Add(3);
+    }
+
+    static void ValRefTypesDemo()
+    {
+        EvilStruct es1 = new EvilStruct();
+        //es1.PointRef = new PointRef() { X = 1, Y = 2 };
+        //es1.PointRef.X = 1;
+        //es1.PointRef.Y = 2;
+        EvilStruct es2 = es1;
+
+        Console.WriteLine($"es1.PointRef.X={es1.PointRef.X}, es1.PointRef.Y={es1.PointRef.Y}");
+        Console.WriteLine($"es2.PointRef.X={es2.PointRef.X}, es2.PointRef.Y={es2.PointRef.Y}");
+
+        es2.PointRef.X = 42;
+        es2.PointRef.Y = 45;
+
+        Console.WriteLine($"es1.PointRef.X={es1.PointRef.X}, es1.PointRef.Y={es1.PointRef.Y}");
+        Console.WriteLine($"es2.PointRef.X={es2.PointRef.X}, es2.PointRef.Y={es2.PointRef.Y}");
+
+        Console.ReadLine();
+
+        PointVal a; //same as PointVal a = new PointVal();
         a.X = 3;
         a.Y = 5;
 
@@ -17,7 +77,8 @@ internal class Program
         a.LogValues();
         b.LogValues();
 
-        Console.WriteLine("After sturcts");
+        Console.WriteLine("After structs");
+
         PointRef c = new PointRef();
         c.X = 3;
         c.Y = 5;
