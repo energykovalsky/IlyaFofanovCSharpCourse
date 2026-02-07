@@ -6,6 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        Character c = new Character("Orc");
 
     }
 
