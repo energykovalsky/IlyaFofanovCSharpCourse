@@ -6,9 +6,44 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        PointVal? pv = null;
+        if (pv.HasValue)
+        {
+            PointVal pv2 = pv.Value;
+            Console.WriteLine(pv.Value.X);
+            Console.WriteLine(pv2.X);
+        }
+        else
+        {
+            //
+        }
 
+        PointVal? pv3 = pv.GetValueOrDefault();
+
+        PointRef c = null;
+        Console.WriteLine(c.X);
     }
 
+    static void NRE_NullableValTypesDemo()
+    {
+        PointVal? pv = null;
+        if (pv.HasValue)
+        {
+            PointVal pv2 = pv.Value;
+            Console.WriteLine(pv.Value.X);
+            Console.WriteLine(pv2.X);
+        }
+        else
+        {
+            //
+        }
+
+        PointVal pv3 = pv.GetValueOrDefault();
+
+        PointRef c = null;
+        Console.WriteLine(c.X); //NullReferenceException
+    }
+    
     static void PassByRefDemo()
     {
         int a = 1;
