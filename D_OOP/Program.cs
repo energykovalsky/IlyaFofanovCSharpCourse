@@ -6,22 +6,31 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        PointVal? pv = null;
-        if (pv.HasValue)
+
+    }
+
+    static void Do(object obj)
+    {
+        bool isPointRef = obj is PointRef;
+        if (isPointRef)
         {
-            PointVal pv2 = pv.Value;
-            Console.WriteLine(pv.Value.X);
-            Console.WriteLine(pv2.X);
+            PointRef pr = (PointRef)obj;
+            Console.WriteLine(pr.X);
+        }
+        else
+        {
+            //do smth.
+        }
+
+        PointRef pr1 = obj as PointRef;
+        if (pr1 != null)
+        {
+            Console.WriteLine(pr1.X);
         }
         else
         {
             //
         }
-
-        PointVal? pv3 = pv.GetValueOrDefault();
-
-        PointRef c = null;
-        Console.WriteLine(c.X);
     }
 
     static void NRE_NullableValTypesDemo()
