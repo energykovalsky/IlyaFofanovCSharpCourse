@@ -6,10 +6,23 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Character c = new Character("Orc");
 
     }
 
+    static void BoxingUnboxing()
+    {
+        //int x = 1;
+        //object obj = x;
+
+        //int y = (int)obj;
+
+        double pi = 3.14;
+        object obj1 = pi;
+
+        int number = (int)(double)obj1;
+        Console.WriteLine(number);
+    }
+    
     static void Do(object obj)
     {
         bool isPointRef = obj is PointRef;

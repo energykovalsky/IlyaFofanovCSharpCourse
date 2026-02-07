@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using System.Text;
 
 namespace D_OOP
@@ -15,9 +16,11 @@ namespace D_OOP
             this.y = y;
         }
     }
+
     public class Character
     {
-        private static int speed = 10;
+        //private const int speed = 10;
+        private readonly int speed = 10;
         public int Health { get; set; } = 100;
         public string Race { get; private set; }
         public int Armor { get; private set; }
@@ -31,6 +34,13 @@ namespace D_OOP
             Race = race;
             Armor = armor;
         }
+
+        //public Character(string race, int armor, int speed)
+        //{
+        //    Race = race;
+        //    Armor = armor;
+        //    this.speed = speed;
+        //}
 
         public void Hit(int damage)
         {
