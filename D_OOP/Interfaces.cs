@@ -8,6 +8,17 @@
         //void Clear();
     }
 
+    public static class BaseCollectionExtension
+    {
+        public static void AddRange(this IBaseCollection collection, IEnumerable<object> objects)
+        {
+            foreach(var item in objects)
+            {
+                collection.Add(item);
+            }
+        }
+    }
+
     //public abstract class IBaseCollection
     //{
     //    public abstract void Add(object obj);

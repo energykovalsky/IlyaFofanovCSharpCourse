@@ -4,42 +4,49 @@ internal class Program
 {
     static void Main(string[] args)
     {
+
+        Console.ReadLine();
+    }
+
+    static void CallingThroughInterface()
+    {
+        List<object> list = new List<object>() { 1, 2, 3 };
+
         IBaseCollection collection = new BaseList(4);
+        collection.AddRange(list);
+
         collection.Add(1);
+    }
+
+    static void PolymorphismDemo()
+    {
+        //Shape shape = new Shape();
 
         Shape[] shapes = new Shape[2];
-        shapes[0] = new Triangle(10, 10, 10);
+        shapes[0] = new Triangle(10, 20, 30);
         shapes[1] = new Rectangle(5, 10);
 
         foreach (Shape shape in shapes)
         {
             shape.Draw();
-            Console.WriteLine($"Shape.Perimeter = {shape.Perimeter()}");
-        
-            Console.ReadLine();
+            Console.WriteLine(shape.Perimeter());
         }
 
-        static void Do(Shape shape)
-        {
-            shape.Draw();
-        }
-        
-        static void DoTriangle(Triangle triangle)
-        {
-            triangle.Draw();
-        }
+    }
 
-        static void DoRectangle(Rectangle rectangle)
-        {
-            rectangle.Draw();
-        }
+    static void Do(Shape shape)
+    {
+        shape.Draw();
+    }
+    
+    static void DoTriangle(Triangle triangle)
+    {
 
-        //Shape shape = new Shape();
+    }
+    
+    static void DoRectangle(Rectangle rectangle)
+    {
 
-        //ModelXTerminal terminal = new ModelXTerminal("123");
-        //terminal.Connect();
-
-        //Console.ReadLine();
     }
 
     static void BoxingUnboxing()
@@ -55,7 +62,7 @@ internal class Program
         int number = (int)(double)obj1;
         Console.WriteLine(number);
     }
-    
+
     static void Do(object obj)
     {
         bool isPointRef = obj is PointRef;
