@@ -1,10 +1,10 @@
 ﻿namespace CSharpCourse
 {
-    internal class Program
+    static class Program
     {
         private static void Main(string[] args)
         {
-            
+            // Method intentionally left empty.
         }
 
         static void DebuggingDemoExample()      //044 Отладка_ основы основ.mp4                 

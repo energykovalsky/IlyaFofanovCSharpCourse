@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace CSharpCourse
+﻿namespace CSharpCourse
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            // Method intentionally left empty.
         }
 
         static void CustomIndexBasedArrays()    //059 Массивы с настраиваемой индексацией.mp4

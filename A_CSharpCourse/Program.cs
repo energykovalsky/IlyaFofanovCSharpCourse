@@ -1,7 +1,5 @@
-﻿using System.Reflection.PortableExecutable;
-using System.Security.Cryptography;
+﻿using D_OOP;
 using System.Text;
-using D_OOP;
 
 namespace CSharpCourse
 {
@@ -9,7 +7,7 @@ namespace CSharpCourse
     {
         static void Main(string[] args)
         {
-            Character c = new Character();
+            Character c = new Character("race");
             c.Hit(90);
             Console.WriteLine(c.Health);
         }

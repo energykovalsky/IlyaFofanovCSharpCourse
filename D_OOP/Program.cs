@@ -1,12 +1,45 @@
-﻿using D_OOP;
-
-namespace D_OOP;
+﻿namespace D_OOP;
 
 internal class Program
 {
     static void Main(string[] args)
     {
+        IBaseCollection collection = new BaseList(4);
+        collection.Add(1);
 
+        Shape[] shapes = new Shape[2];
+        shapes[0] = new Triangle(10, 10, 10);
+        shapes[1] = new Rectangle(5, 10);
+
+        foreach (Shape shape in shapes)
+        {
+            shape.Draw();
+            Console.WriteLine($"Shape.Perimeter = {shape.Perimeter()}");
+        
+            Console.ReadLine();
+        }
+
+        static void Do(Shape shape)
+        {
+            shape.Draw();
+        }
+        
+        static void DoTriangle(Triangle triangle)
+        {
+            triangle.Draw();
+        }
+
+        static void DoRectangle(Rectangle rectangle)
+        {
+            rectangle.Draw();
+        }
+
+        //Shape shape = new Shape();
+
+        //ModelXTerminal terminal = new ModelXTerminal("123");
+        //terminal.Connect();
+
+        //Console.ReadLine();
     }
 
     static void BoxingUnboxing()

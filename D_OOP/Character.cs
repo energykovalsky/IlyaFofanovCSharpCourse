@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using System.Text;
-
-namespace D_OOP
+﻿namespace D_OOP
 {
     public class Point2D
     {
